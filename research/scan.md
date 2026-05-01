@@ -72,16 +72,41 @@ date: 2026-05-01
 - facebook: facebook.com/KingKwaZuluMusic
 - not listed on the Sunday poster — may be a past/occasional collaborator
 
-## also a hostel (hostelworld listing)
+## also a hostel (hostelworld listing — FULL DETAILS)
 
-Casa Yeshua is NOT just a Sunday event — it's a **hostel** listed on Hostelworld:
-- dorms + camping
-- yoga shala
-- shared kitchen, bar, 24h security
-- check-in 15:00-22:00
-- description: "A wellness-focused sanctuary for conscious travelers"
-- emphasizes intentional community living over party atmosphere
-- hostelworld URL: hostelworld.com Casa-Yesh-a/Mazunte/337561
+hostelworld URL: hostelworld.com/pwa/hosteldetails.php/Casa-Yesh-a/Mazunte/337561
+**rating: 9.7/10 Superb (3 reviews)**
+
+### description
+"An embodied living sanctuary for conscious travellers seeking depth, presence, and authentic community. Not a party hostel or a place for passive tourism." Sits on a gentle hillside near Mazunte's entrance, ocean views, ~2 min from town center, ~7 min from beach.
+
+### pricing
+- dorms from MXN 300/night
+- private rooms from MXN 150/night
+- cash only at arrival, taxes included
+
+### amenities
+- free WiFi, luggage storage, bar, self-catering facilities
+- security lockers, 24h security, linen included, mosquito nets
+- ocean-view yoga shala
+- large communal areas, shared kitchen (limited during events)
+- quiet reflection zones, shared bathrooms
+
+### activities (optional, some additional fee)
+- yoga + movement classes
+- singing circles, music jams
+- community dinners, workshops
+- morning rituals: breathwork, yoga, ice bath, breakfast
+
+### policies
+- check-in: 15:00-22:00, checkout before 11:00
+- cancellation: 1 day before arrival
+- no curfew, no children, pets allowed
+- smoking in designated areas only
+- credit cards NOT accepted
+
+### target
+"Ideal for yogis, artists, healers, and conscious travelers. Not suited for party-focused stays or heavy substance use."
 
 ## existing web presence
 

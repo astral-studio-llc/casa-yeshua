@@ -730,6 +730,136 @@ section { position: relative; }
   color: var(--gold);
 }
 
+/* ---------- About / Sanctuary ---------- */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  max-width: 900px;
+  margin: 0 auto;
+  align-items: start;
+}
+.about-grid p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--mist-pale);
+  margin-bottom: 1.25rem;
+}
+.about-grid p:last-child { margin-bottom: 0; }
+.about-grid p strong { color: var(--bone); font-weight: 500; }
+.about-grid p em { font-family: var(--f-serif); font-style: italic; color: var(--gold-glow); }
+.about-pull {
+  font-family: var(--f-display);
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+  line-height: 1.3;
+  color: var(--bone);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
+}
+.about-pull em { color: var(--gold-glow); }
+@media (max-width: 760px) {
+  .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+/* ---------- Stay section ---------- */
+.stay-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.stay-card {
+  background: rgba(242, 233, 218, 0.04);
+  border: 1px solid rgba(242, 233, 218, 0.06);
+  border-radius: 12px;
+  padding: 1.75rem 1.5rem;
+  text-align: center;
+}
+.stay-card__icon {
+  width: 32px;
+  height: 32px;
+  color: var(--gold);
+  margin: 0 auto 1rem;
+}
+.stay-card__title {
+  font-family: var(--f-display);
+  font-weight: 400;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+.stay-card__desc {
+  font-size: 0.85rem;
+  color: var(--mist-pale);
+  line-height: 1.5;
+}
+
+/* ---------- Map / Location ---------- */
+.location-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+  align-items: center;
+}
+.location__map {
+  aspect-ratio: 4/3;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(242, 233, 218, 0.08);
+}
+.location__map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: invert(0.9) hue-rotate(180deg) saturate(0.3) brightness(0.7) contrast(1.2);
+}
+.location__details h3 {
+  font-family: var(--f-display);
+  font-weight: 400;
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+  color: var(--gold-glow);
+}
+.location__details p {
+  font-size: 0.92rem;
+  color: var(--mist-pale);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+.location__details a {
+  color: var(--gold);
+  border-bottom: 1px solid rgba(212, 168, 75, 0.3);
+  transition: border-color 200ms;
+}
+.location__details a:hover { border-color: var(--gold); }
+@media (max-width: 760px) {
+  .location-grid { grid-template-columns: 1fr; }
+}
+
+/* ---------- Season banner ---------- */
+.season {
+  text-align: center;
+  padding: clamp(3rem, 6vw, 5rem) var(--gutter);
+  border-top: 1px solid rgba(242, 233, 218, 0.06);
+  border-bottom: 1px solid rgba(242, 233, 218, 0.06);
+  background: var(--ink-2);
+}
+.season__text {
+  font-family: var(--f-display);
+  font-weight: 350;
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  line-height: 1.5;
+  color: var(--bone-2);
+  max-width: 600px;
+  margin: 0 auto;
+}
+.season__text em { font-style: italic; color: var(--gold-glow); }
+.season__text strong { color: var(--bone); font-weight: 400; }
+
 /* ---------- Scroll reveal ---------- */
 .reveal {
   opacity: 0;
@@ -748,9 +878,10 @@ section { position: relative; }
 <nav class="nav" id="nav">
   <a href="#top" class="nav__mark">Casa Yeshua</a>
   <ul class="nav__links">
-    <li><a href="#journey">The Journey</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#journey">Sundays</a></li>
     <li><a href="#pricing">Pricing</a></li>
-    <li><a href="#essentials">Essentials</a></li>
+    <li><a href="#stay">Stay</a></li>
     <li><a href="#rsvp" class="nav__cta">Join Us</a></li>
   </ul>
   <button class="nav__menu-btn" aria-label="Open menu" id="menuOpen">
@@ -767,9 +898,10 @@ section { position: relative; }
     </button>
   </div>
   <ul class="drawer__links">
-    <li><a href="#journey" onclick="closeDrawer()">The <em>Journey</em></a></li>
+    <li><a href="#about" onclick="closeDrawer()">The <em>Space</em></a></li>
+    <li><a href="#journey" onclick="closeDrawer()">Sundays</a></li>
     <li><a href="#pricing" onclick="closeDrawer()">Pricing</a></li>
-    <li><a href="#essentials" onclick="closeDrawer()">Essentials</a></li>
+    <li><a href="#stay" onclick="closeDrawer()"><em>Stay</em> With Us</a></li>
     <li><a href="#rsvp" onclick="closeDrawer()">Join <em>Us</em></a></li>
   </ul>
 </div>
@@ -844,6 +976,38 @@ section { position: relative; }
   </div>
 </div>
 
+<!-- ===== ABOUT ===== -->
+<section id="about" class="section section--ink">
+  <div class="wrap">
+    <div class="section__head reveal">
+      <p class="section__num">The Space</p>
+      <h2 class="section__title">A hilltop sanctuary for <em>embodied living</em></h2>
+      <p class="section__desc">Two minutes from downtown Mazunte. Seven from the beach. A world away from everything else.</p>
+    </div>
+
+    <div class="about-grid reveal">
+      <div>
+        <p class="about-pull">Where daily morning practices and communal meals create a retreat-like space for <em>reconnection.</em></p>
+        <p>Casa Yeshua sits on a hilltop overlooking Mazunte, surrounded by forest. Part hostel, part yoga shala, part community kitchen — a place built for people who want to live intentionally, not just pass through.</p>
+        <p>The space runs on a simple rhythm: <strong>morning practice, shared meals, evening gathering.</strong> No agenda beyond presence. No prerequisites beyond showing up.</p>
+      </div>
+      <div>
+        <p>This is not a party hostel. It's a <strong>sober conscious space</strong> — a sanctuary for travelers, movers, musicians, and seekers who want depth over distraction.</p>
+        <p>The Sunday Full Experience grew out of this daily rhythm. What started as a gathering for the house community became the heartbeat of Mazunte's rainy season — <em>six months of movement, music, and ritual</em>, open to anyone who finds their way here.</p>
+        <p>Vegan and vegetarian food. Respect, presence, connection. Come as you are.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SEASON ===== -->
+<div class="season reveal">
+  <p class="season__text">
+    The rainy season has begun. <em>Let's begin this 6-month journey together.</em><br>
+    Every Sunday. <strong>Same time. Same tribe.</strong> From now through November.
+  </p>
+</div>
+
 <!-- ===== THE JOURNEY ===== -->
 <section id="journey" class="section section--warm grain">
   <div class="wrap">
@@ -861,7 +1025,7 @@ section { position: relative; }
         <div>
           <span class="journey__label">Playtime</span>
           <h3 class="journey__name">Ice Bath + Workshop</h3>
-          <p class="journey__desc">Connect to yourself and one another through interactive vocal and movement games. A playful and dynamic space to liberate your inner child and open to creativity.</p>
+          <p class="journey__desc">Connect to yourself and one another through interactive vocal and movement games. A playful and dynamic space to liberate your inner child and open to creativity. The ice bath wakes you up. The workshop keeps you there.</p>
         </div>
       </div>
 
@@ -871,7 +1035,7 @@ section { position: relative; }
         </div>
         <div>
           <h3 class="journey__name">Ecstatic Dance</h3>
-          <p class="journey__desc">Two hours of unstructured movement. No steps to learn, no way to get it wrong. Just you, the music, and the rain.</p>
+          <p class="journey__desc">Two hours of unstructured movement. No steps to learn, no way to get it wrong. No talking on the dance floor, no phones, no shoes. Just you, the music, and the rain on the roof. Dance in the rain, open your heart, feel alive.</p>
           <p class="journey__host">with DJ Ur Magic</p>
         </div>
       </div>
@@ -882,7 +1046,7 @@ section { position: relative; }
         </div>
         <div>
           <h3 class="journey__name">Community Dinner</h3>
-          <p class="journey__desc">Nourishing vegetarian and vegan dishes. Sit with people you just danced with. Share a meal, share a moment.</p>
+          <p class="journey__desc">Nourishing vegetarian and vegan dishes, made with organic ingredients from local producers. Sit with people you just danced with. Eat slowly. Stay a while. This is where the conversations happen.</p>
         </div>
       </div>
 
@@ -892,7 +1056,7 @@ section { position: relative; }
         </div>
         <div>
           <h3 class="journey__name">Singing Circle</h3>
-          <p class="journey__desc">Close the evening with voice. Guided songs and harmonies in a circle. No experience needed &mdash; just an open heart.</p>
+          <p class="journey__desc">Close the evening with voice. Guided songs and harmonies in a circle &mdash; simple melodies that anyone can follow. No experience needed. The day started with cold water and ends with warm voices. That's the arc.</p>
           <p class="journey__host">guided by Felix</p>
         </div>
       </div>
@@ -1009,6 +1173,76 @@ section { position: relative; }
             Respect &middot; presence &middot; connection
           </li>
         </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STAY WITH US ===== -->
+<section id="stay" class="section section--ink">
+  <div class="wrap">
+    <div class="section__head reveal">
+      <p class="section__num">Stay With Us</p>
+      <h2 class="section__title">More than a <em>Sunday</em></h2>
+      <p class="section__desc">Casa Yeshua is also a place to sleep, eat, and live. Stay for a night, a week, or the whole season.</p>
+    </div>
+
+    <div class="stay-grid reveal">
+      <div class="stay-card">
+        <svg class="stay-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0h4"/></svg>
+        <p class="stay-card__title">Dorms + Private Rooms</p>
+        <p class="stay-card__desc">From $150 MXN/night. Linen, mosquito nets, security lockers included. On a hilltop with ocean views.</p>
+      </div>
+
+      <div class="stay-card">
+        <svg class="stay-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6h16M4 12h16M4 18h7"/></svg>
+        <p class="stay-card__title">Ocean-View Yoga Shala</p>
+        <p class="stay-card__desc">Morning rituals: breathwork, yoga, ice bath, breakfast. Move before the day begins.</p>
+      </div>
+
+      <div class="stay-card">
+        <svg class="stay-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 6v6l4 2"/><circle cx="12" cy="12" r="10"/></svg>
+        <p class="stay-card__title">Communal Kitchen + Bar</p>
+        <p class="stay-card__desc">Shared kitchen, organic ingredients, community dinners. Plus a bar for the evenings. No curfew.</p>
+      </div>
+
+      <div class="stay-card">
+        <svg class="stay-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        <p class="stay-card__title">For Conscious Travelers</p>
+        <p class="stay-card__desc">Yogis, artists, healers, seekers. Not a party hostel. Free WiFi, 24h security, pets welcome.</p>
+      </div>
+    </div>
+
+    <p style="text-align: center; margin-top: 1.5rem; font-size: 0.82rem; color: var(--mist);" class="reveal">
+      Rated <strong style="color: var(--gold-glow);">9.7/10</strong> on Hostelworld &middot; Check-in 3:00&ndash;10:00 PM &middot; Cash only
+    </p>
+
+    <div style="text-align: center; margin-top: 2.5rem;" class="reveal">
+      <a href="https://wa.me/522731009561?text=Hola%20%F0%9F%99%8F%20I%27m%20interested%20in%20staying%20at%20Casa%20Yeshua" target="_blank" rel="noopener" class="btn btn--ghost">Ask About Availability</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FIND US ===== -->
+<section id="location" class="section section--warm grain">
+  <div class="wrap">
+    <div class="section__head reveal">
+      <p class="section__num">Find Us</p>
+      <h2 class="section__title">Mazunte, <em>Oaxaca</em></h2>
+    </div>
+
+    <div class="location-grid reveal">
+      <div class="location__map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1920!2d-96.5564!3d15.6681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85b9290061fca121%3A0x1d270f8e29336af6!2sCasa%20Yesh%C3%BAa!5e0!3m2!1ses!2smx!4v1714000000000" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Casa Yeshua on Google Maps"></iframe>
+      </div>
+      <div class="location__details">
+        <h3>Casa Yeshua</h3>
+        <p>Avenida Principal, 70947<br>Mazunte, Oaxaca, Mexico</p>
+        <p>On a hilltop, two minutes from downtown Mazunte. Seven minutes walking to the beach. Across from the Sunday organic market.</p>
+        <p>Check-in: 3:00 &ndash; 10:00 PM</p>
+        <p>
+          <a href="https://maps.app.goo.gl/poa29qrSEPzytVFi7?g_st=ac" target="_blank" rel="noopener">Open in Google Maps &rarr;</a>
+        </p>
       </div>
     </div>
   </div>
