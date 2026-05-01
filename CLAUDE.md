@@ -81,11 +81,35 @@ these were built during the mend-a-mano session. reuse, don't rewrite:
 - `/tmp/bc_create_project.mjs` — create a basecamp project (used today; template_id path doesn't work, falls back to plain)
 - `/tmp/shoot.mjs` — puppeteer-core full-page screenshots (chrome at /Applications/Google Chrome.app)
 
-## CTA / contact
+## CTA / contact (from deep scan 2026-05-01)
 
-the poster has a QR code (presumably linking to a contact / signup form) and "see you Sunday ❤". no email or phone visible on the poster. likely the booking is via WhatsApp or Telegram in Mazunte's local network.
+**instagram:** @casayeshuamazunte (primary public channel, used as CTA on site)
+**instagram (venue):** @casa_yeshua_mitotecali ("A sanctuary for embodied living")
+**facebook:** facebook.com/Mitotecali/
+**phone (unconfirmed):** 984 142 5227 (from CI Global Calendar listing for Mitotecali — needs jordi confirmation before using publicly)
+**no email found publicly.** no website exists — we're building their first one.
 
-**ask jordi** what the contact channel should be (WhatsApp number? insta DM? a tally form?) before publishing the site. don't guess.
+the poster QR code could not be decoded from the JPEG. likely points to instagram or a whatsapp link.
+
+**site CTA currently points to:** instagram.com/casayeshuamazunte (DM to reserve)
+**still need from jordi:** confirmation of the phone/whatsapp number, and whether they want a form or just instagram DMs.
+
+## venue: Mitotecali
+
+- address: Buganvilias / Calle Principal, across from the organic Sunday market, 70947 Mazunte, Oaxaca
+- also: "Frente de Restaurant la Empanada, Av. Principal Mazunte"
+- hosts CI workshops, ecstatic jams, community dinners, the Sunday Full Experience
+
+## people
+
+- **Yeshua** — host/founder of Casa Yeshua. also runs a small organic restaurant ("Yeshua") in Mazunte — dinner only, dish of the day. no last name found.
+- **DJ Ur Magic** — ecstatic dance DJ (5-7 PM). no online presence found.
+- **Felix** — singing circle guide (8-8:30 PM). no online presence found.
+- **King Kwa Zulu** — DJ/MC who has performed at the space. based in San Cristobal. email: kingkwazulu@gmail.com, IG: @kingkwazulu. not on the current Sunday poster.
+
+## NOT the same as Ecstatic Sunday
+
+Ecstatic Sunday (@ecstaticsunday) is a separate event at Villa Punto de Equilibrio, Zapotal. Different organizers, venue, timing (12-7 PM), and pricing (250/150 MXN). Casa Yeshua is a distinct event at Mitotecali in Mazunte proper.
 
 ## rocket.chat
 
