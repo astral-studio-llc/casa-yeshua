@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Casa Yeshúa — Sunday Full Experience · Mazunte</title>
+<meta name="description" content="Every Sunday in Mazunte. Ice bath, ecstatic dance, community dinner, singing circle. A 6-month rainy-season journey of movement, breath, expression, and connection.">
+<meta name="theme-color" content="#0D0B08">
+<meta property="og:title" content="Casa Yeshúa — Sunday Full Experience">
+<meta property="og:description" content="Come as you are. Leave more alive. Every Sunday in Mazunte.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Instrument+Serif:ital@0;1&family=Manrope:wght@300..700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --ink: #0D0B08;
+  --ink-2: #14100C;
+  --ink-3: #1E1812;
+  --ink-4: #2A211A;
+
+  --bone: #F2E9DA;
+  --bone-2: #EADFC9;
+  --bone-3: #DCCBAA;
+  --bone-4: #C9B691;
+
+  --gold: #D4A84B;
+  --gold-deep: #8E6425;
+  --gold-glow: #E8C56D;
+  --gold-muted: #A68932;
+
+  --forest: #2D4A2A;
+  --forest-muted: rgba(45, 74, 42, 0.15);
+
+  --mist: #9A8D7A;
+  --mist-dark: #5A5043;
+  --mist-pale: #B8AB97;
+
+  --f-display: 'Fraunces', serif;
+  --f-serif: 'Instrument Serif', serif;
+  --f-body: 'Manrope', system-ui, sans-serif;
+
+  --max: 1100px;
+  --gutter: clamp(1.25rem, 4vw, 3rem);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+body {
+  font-family: var(--f-body);
+  font-weight: 300;
+  color: var(--bone);
+  background: var(--ink);
+  line-height: 1.55;
+  overflow-x: hidden;
+}
+
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; background: none; border: none; color: inherit; cursor: pointer; }
+
+.eyebrow {
+  font-family: var(--f-body);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.display {
+  font-family: var(--f-display);
+  font-variation-settings: "opsz" 144, "SOFT" 50;
+  font-weight: 350;
+  letter-spacing: -0.028em;
+  line-height: 0.98;
+}
+.display em {
+  font-style: italic;
+  font-variation-settings: "opsz" 144, "SOFT" 100;
+  font-weight: 300;
+  color: var(--gold-glow);
+}
+
+.lede {
+  font-family: var(--f-display);
+  font-variation-settings: "opsz" 24;
+  font-weight: 350;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+}
+
+.serif-italic {
+  font-family: var(--f-serif);
+  font-style: italic;
+}
+
+.quiet { color: var(--mist); font-weight: 300; }
+.wrap { max-width: var(--max); margin: 0 auto; }
+
+.grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.06;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.6 0'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.5'/></svg>");
+  z-index: 1;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1rem 1.5rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: transform 320ms cubic-bezier(.22,1,.36,1), background 320ms ease, color 320ms ease, border-color 320ms ease;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn--primary { background: var(--gold); color: var(--ink); }
+.btn--primary:hover { background: var(--gold-glow); }
+.btn--ghost { color: var(--bone); border-color: rgba(242, 233, 218, 0.22); }
+.btn--ghost:hover { border-color: var(--gold); color: var(--gold-glow); }
+
+/* ---------- Nav ---------- */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 1.1rem var(--gutter);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  transition: background 400ms ease, backdrop-filter 400ms ease, padding 400ms ease;
+}
+.nav.scrolled {
+  background: rgba(13, 11, 8, 0.85);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(242, 233, 218, 0.06);
+}
+.nav__mark {
+  font-family: var(--f-display);
+  font-weight: 400;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+  color: var(--gold-glow);
+}
+.nav__links {
+  display: flex;
+  gap: 2.25rem;
+  list-style: none;
+  align-items: center;
+}
+.nav__links a {
+  font-size: 0.82rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--bone-2);
+  position: relative;
+  padding: 0.4rem 0;
+  transition: color 260ms ease;
+}
+.nav__links a::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 100%;
+  bottom: 0.15rem;
+  height: 1px;
+  background: var(--gold);
+  transition: right 360ms cubic-bezier(.22,1,.36,1);
+}
+.nav__links a:hover { color: var(--bone); }
+.nav__links a:hover::after { right: 0; }
+.nav__cta {
+  border: 1px solid rgba(242, 233, 218, 0.22);
+  padding: 0.6rem 1.1rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: background 260ms ease, border-color 260ms ease, color 260ms ease;
+}
+.nav__cta:hover {
+  background: var(--gold);
+  color: var(--ink);
+  border-color: var(--gold);
+}
+.nav__cta::after { display: none; }
+.nav__menu-btn {
+  display: none;
+  padding: 0.5rem;
+  color: var(--bone);
+}
+@media (max-width: 900px) {
+  .nav__links { display: none; }
+  .nav__menu-btn { display: block; }
+}
+
+/* Mobile drawer */
+.drawer {
+  position: fixed;
+  inset: 0;
+  background: var(--ink);
+  z-index: 150;
+  padding: 2rem var(--gutter);
+  transform: translateY(-100%);
+  transition: transform 460ms cubic-bezier(.83,0,.17,1);
+  display: flex;
+  flex-direction: column;
+}
+.drawer.open { transform: translateY(0); }
+.drawer__top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 3rem; }
+.drawer__links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.drawer__links a {
+  font-family: var(--f-display);
+  font-size: 2rem;
+  font-weight: 350;
+  letter-spacing: -0.02em;
+}
+.drawer__links a em { color: var(--gold); font-style: italic; font-weight: 300; }
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  padding: 7.5rem var(--gutter) 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 30%, rgba(212, 168, 75, 0.08) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 40% at 80% 80%, var(--forest-muted) 0%, transparent 55%),
+    linear-gradient(180deg, var(--ink) 0%, var(--ink-2) 100%);
+}
+.hero__inner {
+  position: relative;
+  z-index: 2;
+  max-width: 740px;
+}
+.hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+  padding: 0.5rem 1.2rem;
+  border: 1px solid rgba(212, 168, 75, 0.25);
+  border-radius: 999px;
+  opacity: 0;
+  animation: rise 900ms 200ms cubic-bezier(.22,1,.36,1) forwards;
+}
+.hero__badge .dot { width: 6px; height: 6px; background: var(--gold); border-radius: 50%; animation: pulse 2s ease-in-out infinite; }
+.hero__title {
+  font-size: clamp(3rem, 7vw, 6rem);
+  margin-bottom: 0.75rem;
+  opacity: 0;
+  animation: rise 1100ms 380ms cubic-bezier(.22,1,.36,1) forwards;
+}
+.hero__subtitle {
+  font-family: var(--f-display);
+  font-weight: 350;
+  font-style: italic;
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  color: var(--gold-glow);
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: rise 1100ms 500ms cubic-bezier(.22,1,.36,1) forwards;
+}
+.hero__tagline {
+  font-size: 0.88rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--bone-3);
+  margin-bottom: 2.5rem;
+  opacity: 0;
+  animation: rise 1100ms 620ms cubic-bezier(.22,1,.36,1) forwards;
+}
+.hero__ctas {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  opacity: 0;
+  animation: rise 1100ms 740ms cubic-bezier(.22,1,.36,1) forwards;
+}
+.hero__tag {
+  position: absolute;
+  bottom: 2rem;
+  right: var(--gutter);
+  z-index: 2;
+  font-size: 0.7rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--mist);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.hero__tag .dot { width: 4px; height: 4px; background: var(--gold); border-radius: 50%; }
+
+@media (max-width: 900px) {
+  .hero { padding-top: 6.5rem; min-height: 90vh; }
+  .hero__tag { position: static; margin-top: 3rem; justify-content: center; }
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* ---------- Marquee ---------- */
+.marquee {
+  border-top: 1px solid rgba(242, 233, 218, 0.08);
+  border-bottom: 1px solid rgba(242, 233, 218, 0.08);
+  background: var(--ink-2);
+  padding: 1.8rem 0;
+  overflow: hidden;
+}
+.marquee__track {
+  display: flex;
+  gap: 3rem;
+  animation: scroll 40s linear infinite;
+  white-space: nowrap;
+}
+.marquee__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.82rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--bone-3);
+}
+.marquee__item .sep { width: 3px; height: 3px; background: var(--gold); border-radius: 50%; }
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ---------- Section shared ---------- */
+section { position: relative; }
+.section {
+  padding: clamp(5rem, 9vw, 8rem) var(--gutter);
+}
+.section--bone { background: var(--bone); color: var(--ink); }
+.section--ink { background: var(--ink); }
+.section--warm {
+  background:
+    radial-gradient(ellipse 70% 50% at 80% 30%, rgba(212, 168, 75, 0.1) 0%, transparent 60%),
+    linear-gradient(180deg, var(--ink-2) 0%, var(--ink) 100%);
+}
+
+.section__head {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 4rem;
+}
+.section__num {
+  font-family: var(--f-display);
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: var(--gold);
+  margin-bottom: 0.75rem;
+}
+.section__title {
+  font-family: var(--f-display);
+  font-variation-settings: "opsz" 144, "SOFT" 50;
+  font-weight: 350;
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+  margin-bottom: 1rem;
+}
+.section__title em {
+  font-style: italic;
+  color: var(--gold-glow);
+  font-weight: 300;
+}
+.section__desc {
+  font-size: 1rem;
+  color: var(--mist-pale);
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.65;
+}
+
+/* ---------- Journey / Schedule ---------- */
+.journey-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.journey-item {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 2rem;
+  padding: 2.5rem 0;
+  border-bottom: 1px solid rgba(242, 233, 218, 0.08);
+  align-items: start;
+}
+.journey-item:first-child { border-top: 1px solid rgba(242, 233, 218, 0.08); }
+.journey__time {
+  font-family: var(--f-display);
+  font-weight: 350;
+  font-size: 1.1rem;
+  color: var(--gold-glow);
+  letter-spacing: -0.01em;
+}
+.journey__name {
+  font-family: var(--f-display);
+  font-weight: 400;
+  font-size: 1.35rem;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.3rem;
+}
+.journey__label {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: rgba(212, 168, 75, 0.1);
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  margin-bottom: 0.6rem;
+}
+.journey__desc {
+  font-size: 0.92rem;
+  color: var(--mist-pale);
+  line-height: 1.6;
+  max-width: 480px;
+}
+.journey__host {
+  font-size: 0.82rem;
+  color: var(--mist);
+  margin-top: 0.4rem;
+}
+
+@media (max-width: 600px) {
+  .journey-item { grid-template-columns: 1fr; gap: 0.5rem; }
+}
+
+/* ---------- Pricing / Tiers ---------- */
+.tiers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.tier {
+  background: var(--ink-3);
+  border: 1px solid rgba(242, 233, 218, 0.06);
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: border-color 300ms ease, transform 300ms ease;
+  position: relative;
+}
+.tier:hover { border-color: rgba(212, 168, 75, 0.3); transform: translateY(-2px); }
+.tier--best {
+  border-color: var(--gold);
+  background: linear-gradient(180deg, rgba(212, 168, 75, 0.08) 0%, var(--ink-3) 100%);
+}
+.tier__badge {
+  position: absolute;
+  top: -0.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  background: var(--gold);
+  color: var(--ink);
+  padding: 0.25rem 0.8rem;
+  border-radius: 999px;
+}
+.tier__name {
+  font-family: var(--f-display);
+  font-weight: 350;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.25;
+  min-height: 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tier__price {
+  font-family: var(--f-display);
+  font-weight: 400;
+  font-size: 2.5rem;
+  color: var(--gold-glow);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.25rem;
+}
+.tier__currency {
+  font-size: 0.82rem;
+  color: var(--mist);
+  font-weight: 400;
+}
+.tier__note {
+  font-size: 0.78rem;
+  color: var(--mist);
+  margin-top: 0.75rem;
+}
+.tier__includes {
+  list-style: none;
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(242, 233, 218, 0.06);
+  text-align: left;
+}
+.tier__includes li {
+  font-size: 0.82rem;
+  color: var(--bone-3);
+  padding: 0.3rem 0;
+  padding-left: 1.2rem;
+  position: relative;
+}
+.tier__includes li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.65rem;
+  width: 5px;
+  height: 5px;
+  background: var(--gold);
+  border-radius: 50%;
+}
+
+/* ---------- Pull quote ---------- */
+.pull {
+  padding: clamp(4rem, 8vw, 7rem) var(--gutter);
+  text-align: center;
+  border-top: 1px solid rgba(242, 233, 218, 0.06);
+  border-bottom: 1px solid rgba(242, 233, 218, 0.06);
+}
+.pull__text {
+  font-family: var(--f-display);
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(1.6rem, 3.5vw, 2.8rem);
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  max-width: 700px;
+  margin: 0 auto;
+  color: var(--bone);
+}
+.pull__text em { color: var(--gold-glow); font-weight: 350; }
+
+/* ---------- Essentials (what to bring) ---------- */
+.essentials {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.essentials__col h3 {
+  font-family: var(--f-display);
+  font-weight: 400;
+  font-size: 1.15rem;
+  margin-bottom: 1.25rem;
+  color: var(--gold-glow);
+}
+.essentials__list {
+  list-style: none;
+}
+.essentials__list li {
+  padding: 0.7rem 0;
+  border-bottom: 1px solid rgba(242, 233, 218, 0.06);
+  font-size: 0.92rem;
+  color: var(--bone-2);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.essentials__list li:last-child { border-bottom: none; }
+.essentials__icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: var(--gold);
+}
+
+@media (max-width: 600px) {
+  .essentials { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+/* ---------- CTA / Contact ---------- */
+.cta-section {
+  padding: clamp(5rem, 9vw, 8rem) var(--gutter);
+  text-align: center;
+  background:
+    radial-gradient(ellipse 60% 50% at 50% 60%, rgba(212, 168, 75, 0.12) 0%, transparent 60%),
+    var(--ink);
+}
+.cta__title {
+  font-family: var(--f-display);
+  font-variation-settings: "opsz" 144, "SOFT" 50;
+  font-weight: 350;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+  margin-bottom: 1rem;
+}
+.cta__title em { font-style: italic; color: var(--gold-glow); font-weight: 300; }
+.cta__sub {
+  font-size: 1rem;
+  color: var(--mist-pale);
+  margin-bottom: 2.5rem;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+.cta__buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+/* ---------- Footer ---------- */
+.foot {
+  border-top: 1px solid rgba(242, 233, 218, 0.06);
+  padding: 3rem var(--gutter);
+  text-align: center;
+}
+.foot__mark {
+  font-family: var(--f-display);
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: var(--gold-glow);
+  margin-bottom: 1rem;
+}
+.foot__info {
+  font-size: 0.78rem;
+  color: var(--mist);
+  line-height: 1.8;
+}
+.foot__info a { color: var(--bone-3); transition: color 200ms; }
+.foot__info a:hover { color: var(--gold); }
+.foot__bottom {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(242, 233, 218, 0.04);
+  font-size: 0.68rem;
+  color: var(--mist-dark);
+  letter-spacing: 0.1em;
+}
+
+/* ---------- Flower of Life SVG ---------- */
+.flower-of-life {
+  width: 60px;
+  height: 60px;
+  color: var(--gold);
+  opacity: 0.6;
+  margin: 0 auto 1.5rem;
+}
+
+/* ---------- Rain effect ---------- */
+.rain {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+.rain span {
+  position: absolute;
+  width: 1px;
+  height: 20px;
+  background: linear-gradient(180deg, transparent 0%, rgba(242, 233, 218, 0.08) 100%);
+  animation: rain-fall linear infinite;
+}
+@keyframes rain-fall {
+  0% { transform: translateY(-20px); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
+
+/* ---------- Trust markers ---------- */
+.trust {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+}
+.trust__item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--bone-3);
+}
+.trust__item svg {
+  width: 16px;
+  height: 16px;
+  color: var(--gold);
+}
+
+/* ---------- Scroll reveal ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 600ms cubic-bezier(.22,1,.36,1), transform 600ms cubic-bezier(.22,1,.36,1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav class="nav" id="nav">
+  <a href="#top" class="nav__mark">Casa Yeshua</a>
+  <ul class="nav__links">
+    <li><a href="#journey">The Journey</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#essentials">Essentials</a></li>
+    <li><a href="#rsvp" class="nav__cta">Join Us</a></li>
+  </ul>
+  <button class="nav__menu-btn" aria-label="Open menu" id="menuOpen">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+  </button>
+</nav>
+
+<!-- ===== MOBILE DRAWER ===== -->
+<div class="drawer" id="drawer">
+  <div class="drawer__top">
+    <span class="nav__mark">Casa Yeshua</span>
+    <button aria-label="Close menu" id="menuClose">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+    </button>
+  </div>
+  <ul class="drawer__links">
+    <li><a href="#journey" onclick="closeDrawer()">The <em>Journey</em></a></li>
+    <li><a href="#pricing" onclick="closeDrawer()">Pricing</a></li>
+    <li><a href="#essentials" onclick="closeDrawer()">Essentials</a></li>
+    <li><a href="#rsvp" onclick="closeDrawer()">Join <em>Us</em></a></li>
+  </ul>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero grain" id="top" aria-label="Introduction">
+  <div class="rain" id="rain"></div>
+  <div class="hero__inner">
+    <div class="hero__badge">
+      <span class="dot"></span>
+      <span class="eyebrow">the rainy season begins</span>
+    </div>
+
+    <h1 class="hero__title display">
+      Sunday<br><em>Full Experience</em>
+    </h1>
+
+    <p class="hero__subtitle">
+      move. breathe. express. connect.
+    </p>
+
+    <p class="hero__tagline">
+      every sunday &middot; one journey &middot; many ways to join
+    </p>
+
+    <div class="hero__ctas">
+      <a href="#pricing" class="btn btn--primary">Choose Your Experience</a>
+      <a href="#journey" class="btn btn--ghost">See the Schedule</a>
+    </div>
+  </div>
+
+  <div class="hero__tag">
+    <span class="dot"></span>
+    <span>Mazunte, Oaxaca</span>
+    <span class="dot"></span>
+    <span>Every Sunday</span>
+  </div>
+</section>
+
+<!-- ===== MARQUEE ===== -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span class="marquee__item">Ice Bath</span>
+    <span class="marquee__item"><span class="sep"></span></span>
+    <span class="marquee__item">Ecstatic Dance</span>
+    <span class="marquee__item"><span class="sep"></span></span>
+    <span class="marquee__item">Community Dinner</span>
+    <span class="marquee__item"><span class="sep"></span></span>
+    <span class="marquee__item">Singing Circle</span>
+    <span class="marquee__item"><span class="sep"></span></span>
+    <span class="marquee__item">6 Months of Connection</span>
+    <span class="marquee__item"><span class="sep"></span></span>
+    <span class="marquee__item">Sober Conscious Space</span>
+    <span class="marquee__item"><span class="sep"></span></span>
+    <!-- duplicate for seamless loop -->
+    <span class="marquee__item">Ice Bath</span>
+    <span class="marquee__item"><span class="sep"></span></span>
+    <span class="marquee__item">Ecstatic Dance</span>
+    <span class="marquee__item"><span class="sep"></span></span>
+    <span class="marquee__item">Community Dinner</span>
+    <span class="marquee__item"><span class="sep"></span></span>
+    <span class="marquee__item">Singing Circle</span>
+    <span class="marquee__item"><span class="sep"></span></span>
+    <span class="marquee__item">6 Months of Connection</span>
+    <span class="marquee__item"><span class="sep"></span></span>
+    <span class="marquee__item">Sober Conscious Space</span>
+    <span class="marquee__item"><span class="sep"></span></span>
+  </div>
+</div>
+
+<!-- ===== THE JOURNEY ===== -->
+<section id="journey" class="section section--warm grain">
+  <div class="wrap">
+    <div class="section__head reveal">
+      <p class="section__num">The Journey</p>
+      <h2 class="section__title">A sacred space to move, breathe, express and connect <em>in community</em></h2>
+      <p class="section__desc">Four experiences woven into one afternoon. Stay for all of it, or join the parts that call to you.</p>
+    </div>
+
+    <div class="journey-list">
+      <div class="journey-item reveal">
+        <div>
+          <p class="journey__time">3:00 pm</p>
+        </div>
+        <div>
+          <span class="journey__label">Playtime</span>
+          <h3 class="journey__name">Ice Bath + Workshop</h3>
+          <p class="journey__desc">Connect to yourself and one another through interactive vocal and movement games. A playful and dynamic space to liberate your inner child and open to creativity.</p>
+        </div>
+      </div>
+
+      <div class="journey-item reveal">
+        <div>
+          <p class="journey__time">5:00 &ndash; 7:00 pm</p>
+        </div>
+        <div>
+          <h3 class="journey__name">Ecstatic Dance</h3>
+          <p class="journey__desc">Two hours of unstructured movement. No steps to learn, no way to get it wrong. Just you, the music, and the rain.</p>
+          <p class="journey__host">with DJ Ur Magic</p>
+        </div>
+      </div>
+
+      <div class="journey-item reveal">
+        <div>
+          <p class="journey__time">7:00 pm</p>
+        </div>
+        <div>
+          <h3 class="journey__name">Community Dinner</h3>
+          <p class="journey__desc">Nourishing vegetarian and vegan dishes. Sit with people you just danced with. Share a meal, share a moment.</p>
+        </div>
+      </div>
+
+      <div class="journey-item reveal">
+        <div>
+          <p class="journey__time">8:00 &ndash; 8:30 pm</p>
+        </div>
+        <div>
+          <h3 class="journey__name">Singing Circle</h3>
+          <p class="journey__desc">Close the evening with voice. Guided songs and harmonies in a circle. No experience needed &mdash; just an open heart.</p>
+          <p class="journey__host">guided by Felix</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PULL QUOTE ===== -->
+<div class="pull">
+  <p class="pull__text reveal">
+    Dance in the rain, open your heart, <em>feel alive.</em>
+  </p>
+</div>
+
+<!-- ===== PRICING ===== -->
+<section id="pricing" class="section section--ink">
+  <div class="wrap">
+    <div class="section__head reveal">
+      <p class="section__num">Choose Your Experience</p>
+      <h2 class="section__title">Many ways to <em>join</em></h2>
+      <p class="section__desc">Stay for the whole journey or pick the parts that call to you. All prices in MXN.</p>
+    </div>
+
+    <div class="tiers reveal">
+      <div class="tier tier--best">
+        <span class="tier__badge">Best Value</span>
+        <p class="tier__name">Full Experience</p>
+        <p class="tier__price">$350</p>
+        <p class="tier__currency">MXN</p>
+        <ul class="tier__includes">
+          <li>Ice bath + workshop</li>
+          <li>Ecstatic dance</li>
+          <li>Community dinner</li>
+          <li>Singing circle</li>
+        </ul>
+      </div>
+
+      <div class="tier">
+        <p class="tier__name">Ice Bath + Workshop + Dance</p>
+        <p class="tier__price">$250</p>
+        <p class="tier__currency">MXN</p>
+        <ul class="tier__includes">
+          <li>Ice bath + workshop</li>
+          <li>Ecstatic dance</li>
+        </ul>
+      </div>
+
+      <div class="tier">
+        <p class="tier__name">Ecstatic Dance Only</p>
+        <p class="tier__price">$150</p>
+        <p class="tier__currency">MXN</p>
+        <p class="tier__note">$100 for locals</p>
+      </div>
+
+      <div class="tier">
+        <p class="tier__name">Dinner + Singing Circle</p>
+        <p class="tier__price">$150</p>
+        <p class="tier__currency">MXN</p>
+        <ul class="tier__includes">
+          <li>Community dinner</li>
+          <li>Singing circle</li>
+        </ul>
+      </div>
+
+      <div class="tier">
+        <p class="tier__name">Singing Circle Only</p>
+        <p class="tier__price">$100</p>
+        <p class="tier__currency">MXN</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ESSENTIALS ===== -->
+<section id="essentials" class="section section--warm grain">
+  <div class="wrap">
+    <div class="section__head reveal">
+      <p class="section__num">Essentials</p>
+      <h2 class="section__title">What to <em>bring</em></h2>
+    </div>
+
+    <div class="essentials reveal">
+      <div class="essentials__col">
+        <h3>Bring with you</h3>
+        <ul class="essentials__list">
+          <li>
+            <svg class="essentials__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8 2 6 5 6 8c0 4 6 14 6 14s6-10 6-14c0-3-2-6-6-6z"/><circle cx="12" cy="8" r="2"/></svg>
+            Water bottle
+          </li>
+          <li>
+            <svg class="essentials__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0h4"/></svg>
+            Comfortable clothes
+          </li>
+          <li>
+            <svg class="essentials__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+            Open heart
+          </li>
+        </ul>
+      </div>
+
+      <div class="essentials__col">
+        <h3>Our commitments</h3>
+        <ul class="essentials__list">
+          <li>
+            <svg class="essentials__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 6v6l4 2"/><circle cx="12" cy="12" r="10"/></svg>
+            Sober conscious space
+          </li>
+          <li>
+            <svg class="essentials__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 7l-8 4-8-4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m0 0v10l8 4"/></svg>
+            Vegan / vegetarian food
+          </li>
+          <li>
+            <svg class="essentials__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            Respect &middot; presence &middot; connection
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA / RSVP ===== -->
+<section id="rsvp" class="cta-section grain">
+  <div class="wrap">
+    <svg class="flower-of-life" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="0.6">
+      <circle cx="50" cy="50" r="20"/>
+      <circle cx="50" cy="30" r="20"/>
+      <circle cx="50" cy="70" r="20"/>
+      <circle cx="67.32" cy="40" r="20"/>
+      <circle cx="67.32" cy="60" r="20"/>
+      <circle cx="32.68" cy="40" r="20"/>
+      <circle cx="32.68" cy="60" r="20"/>
+    </svg>
+
+    <h2 class="cta__title display reveal">
+      Come as you are.<br><em>Leave more alive.</em>
+    </h2>
+
+    <p class="cta__sub reveal">
+      Let's begin this 6-month journey together. Every Sunday. Same time. Same tribe.
+    </p>
+
+    <div class="cta__buttons reveal">
+      <a href="#rsvp" class="btn btn--primary" id="rsvpBtn">Reserve Your Spot</a>
+    </div>
+
+    <div class="trust reveal">
+      <span class="trust__item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        Sober Space
+      </span>
+      <span class="trust__item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        Vegan / Vegetarian
+      </span>
+      <span class="trust__item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        All Welcome
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="foot">
+  <p class="foot__mark">Casa Yeshua</p>
+  <p class="foot__info">
+    Mazunte, Oaxaca &middot; Every Sunday<br>
+    <span style="font-family: var(--f-serif); font-style: italic; color: var(--gold-glow);">see you sunday</span>
+  </p>
+  <p class="foot__bottom">
+    &copy; 2026 Casa Yeshua &middot; Mazunte
+  </p>
+</footer>
+
+<script>
+// Nav scroll
+const nav = document.getElementById('nav');
+let lastScroll = 0;
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+}, { passive: true });
+
+// Mobile drawer
+const drawer = document.getElementById('drawer');
+document.getElementById('menuOpen').addEventListener('click', () => drawer.classList.add('open'));
+document.getElementById('menuClose').addEventListener('click', () => drawer.classList.remove('open'));
+function closeDrawer() { drawer.classList.remove('open'); }
+
+// Scroll reveal
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+reveals.forEach(el => observer.observe(el));
+
+// Rain effect
+const rainContainer = document.getElementById('rain');
+for (let i = 0; i < 40; i++) {
+  const drop = document.createElement('span');
+  drop.style.left = Math.random() * 100 + '%';
+  drop.style.animationDuration = (1.5 + Math.random() * 2) + 's';
+  drop.style.animationDelay = Math.random() * 3 + 's';
+  drop.style.height = (12 + Math.random() * 16) + 'px';
+  rainContainer.appendChild(drop);
+}
+</script>
+
+</body>
+</html>
