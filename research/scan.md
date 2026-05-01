@@ -2,19 +2,29 @@
 
 date: 2026-05-01
 
+## confirmed contacts (jordi-verified 2026-05-01)
+
+- **whatsapp:** +52 273 100 9561 — wa.me/522731009561 (from their public linktree)
+- **instagram:** @casayeshua.mazunte (NOTE THE DOT) — instagram.com/casayeshua.mazunte/
+- **linktree:** linktr.ee/casayeshua
+- **google maps:** https://maps.app.goo.gl/poa29qrSEPzytVFi7?g_st=ac
+- **google place id:** 0x85b9290061fca121:0x1d270f8e29336af6
+
 ## instagram
 
-### @casayeshuamazunte (primary)
-- full name: Casa Yeshua
-- bio: could not scrape (IG blocks automated extraction)
-- confirmed active account, indexed by google
-- likely the main public-facing channel for the Sunday Full Experience
-- no linktree or external website found
+### @casayeshua.mazunte (CONFIRMED primary — note the dot)
+- the confirmed active account per their own linktree
+- the version without dot (@casayeshuamazunte) found in initial scan may be a different/old account
 
 ### @casa_yeshua_mitotecali (secondary)
 - full name: Casa Yeshua - A sanctuary for embodied living (Mitotecali)
 - has reels (e.g. reel/Cxnsfc0Ooh7/)
-- positioned as the venue/sanctuary account vs the event account above
+- positioned as the venue/sanctuary account
+
+## linktree: linktr.ee/casayeshua
+
+- tagline: "A living sanctuary for movement, music and ritual, where daily morning practices and communal meals create a retreat-like space for reconnection."
+- links to whatsapp (+52 273 100 9561) and instagram (@casayeshua.mazunte)
 
 ## facebook
 
@@ -29,11 +39,12 @@ date: 2026-05-01
 
 ## physical venue: Mitotecali
 
-- **address:** Buganvilias / Calle Principal, across from the organic Sunday market, 70947 Mazunte, Oaxaca
-- also described as: "Frente de Restaurant la Empanada, Av. Principal Mazunte, Frente al mercado Organico de los domingos, Supermanzana En, 70947 Mazunte, Oax."
-- **phone:** 984 142 5227 (from CI Global Calendar listing for events at Mitotecali)
-- hosts Contact Improvisation workshops, ecstatic jams, community events
-- this phone is likely a WhatsApp contact — standard for Mazunte businesses
+- **address (from google maps pin):** Avenida principal, 70947 Mazunte, Oax.
+- also described as: Buganvilias / Calle Principal, across from the organic Sunday market
+- **google maps:** maps.app.goo.gl/poa29qrSEPzytVFi7
+- hilltop location, 2 min from downtown, 7 min from beach
+- hosts CI workshops, ecstatic jams, community dinners, the Sunday Full Experience
+- ~~phone: 984 142 5227~~ — this was from a CI workshop listing, NOT Casa Yeshua's number. discard.
 
 ## people
 
@@ -61,13 +72,24 @@ date: 2026-05-01
 - facebook: facebook.com/KingKwaZuluMusic
 - not listed on the Sunday poster — may be a past/occasional collaborator
 
+## also a hostel (hostelworld listing)
+
+Casa Yeshua is NOT just a Sunday event — it's a **hostel** listed on Hostelworld:
+- dorms + camping
+- yoga shala
+- shared kitchen, bar, 24h security
+- check-in 15:00-22:00
+- description: "A wellness-focused sanctuary for conscious travelers"
+- emphasizes intentional community living over party atmosphere
+- hostelworld URL: hostelworld.com Casa-Yesh-a/Mazunte/337561
+
 ## existing web presence
 
-- **no website** — instagram is the primary channel
-- no google maps business listing found
-- no tripadvisor or booking platform listing
-- no reviews found online for the Sunday event specifically
-- the restaurant "Yeshua" has word-of-mouth mentions in travel blogs but no formal listing
+- **no dedicated website** — linktree + instagram are the primary channels
+- **google maps:** listed as "Casa Yeshua" on Avenida principal, Mazunte
+- **hostelworld:** listed as accommodation
+- no tripadvisor listing found
+- the restaurant "Yeshua" has word-of-mouth mentions in travel blogs
 
 ## relationship to Ecstatic Sunday
 
@@ -79,28 +101,25 @@ date: 2026-05-01
 | time | 12:00-7:00 PM | 3:00-8:30 PM |
 | pricing | 250/150 MXN | 350/250/150/100 MXN |
 | since | 2019 | 2026 (rainy season) |
-| instagram | @ecstaticsunday | @casayeshuamazunte |
+| instagram | @ecstaticsunday | @casayeshua.mazunte |
 | facebook | @ecstaticdancepina | Mitotecali |
 | website | ecstaticsunday.my.canva.site | none |
 
 both are sober conscious spaces with ecstatic dance + singing circles, but different organizers, different venues, different pricing.
 
-## QR code on poster
+## QR code on poster (DECODED)
 
-visible in bottom-left of the poster (assets/poster.jpeg). cannot decode from the JPEG — would need a QR scanner or higher-resolution source. most likely points to:
-- @casayeshuamazunte instagram profile, OR
-- a WhatsApp contact link (wa.me/+52XXXXXXXXXX), OR
-- a linktree/canva page
+the QR code in the bottom-left of the poster points to their **google maps pin:**
+- URL: https://maps.app.goo.gl/poa29qrSEPzytVFi7?g_st=ac
+- resolves to: Casa Yeshua, Avenida principal, 70947 Mazunte, Oax.
+- purpose: "find us on the map" — not a contact form or booking link
 
-**ask jordi** — he can just scan it on his phone and tell us.
+## contact channel conclusion (CONFIRMED)
 
-## contact channel conclusion
-
-**primary:** Instagram DM to @casayeshuamazunte
-**secondary:** phone/WhatsApp at 984 142 5227 (from Mitotecali listing — needs confirmation)
+**primary CTA:** WhatsApp at wa.me/522731009561 (+52 273 100 9561)
+**secondary:** Instagram @casayeshua.mazunte
+**find us:** Google Maps link
 **no email** found publicly
-
-recommendation: use @casayeshuamazunte as the CTA on the site. add the phone as WhatsApp link if jordi confirms it's the right number.
 
 ## community sentiment
 
@@ -108,8 +127,9 @@ no formal reviews found. the Mazunte wellness scene is well-established (Hridaya
 
 ## sources
 
-- instagram.com/casayeshuamazunte/
+- instagram.com/casayeshua.mazunte/
 - instagram.com/casa_yeshua_mitotecali/
+- linktr.ee/casayeshua
 - facebook.com/Mitotecali/
 - facebook.com/KingKwaZuluMusic/videos/3788168508072327/
 - ecstaticdance.org/dance/ecstatic-sunday/

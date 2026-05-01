@@ -81,24 +81,37 @@ these were built during the mend-a-mano session. reuse, don't rewrite:
 - `/tmp/bc_create_project.mjs` — create a basecamp project (used today; template_id path doesn't work, falls back to plain)
 - `/tmp/shoot.mjs` — puppeteer-core full-page screenshots (chrome at /Applications/Google Chrome.app)
 
-## CTA / contact (from deep scan 2026-05-01)
+## CTA / contact (confirmed 2026-05-01)
 
-**instagram:** @casayeshuamazunte (primary public channel, used as CTA on site)
-**instagram (venue):** @casa_yeshua_mitotecali ("A sanctuary for embodied living")
+**whatsapp (CONFIRMED):** +52 273 100 9561 — wa.me/522731009561 (from their public linktree, jordi-verified)
+**instagram (CONFIRMED):** @casayeshua.mazunte (NOTE THE DOT — instagram.com/casayeshua.mazunte/)
+**linktree:** linktr.ee/casayeshua
 **facebook:** facebook.com/Mitotecali/
-**phone (unconfirmed):** 984 142 5227 (from CI Global Calendar listing for Mitotecali — needs jordi confirmation before using publicly)
-**no email found publicly.** no website exists — we're building their first one.
+**google maps:** https://maps.app.goo.gl/poa29qrSEPzytVFi7?g_st=ac (google place id: 0x85b9290061fca121:0x1d270f8e29336af6)
+**no email found publicly.** no website existed before ours.
 
-the poster QR code could not be decoded from the JPEG. likely points to instagram or a whatsapp link.
+the poster QR code points to the google maps pin (decoded by jordi).
 
-**site CTA currently points to:** instagram.com/casayeshuamazunte (DM to reserve)
-**still need from jordi:** confirmation of the phone/whatsapp number, and whether they want a form or just instagram DMs.
+**site CTA:** primary = whatsapp wa.me link, secondary = instagram, tertiary = google maps "find us"
+**~~984 142 5227~~** — this was from a CI workshop listing for Mitotecali, NOT Casa Yeshua's number. discard.
 
-## venue: Mitotecali
+## venue: Mitotecali / Casa Yeshua
 
-- address: Buganvilias / Calle Principal, across from the organic Sunday market, 70947 Mazunte, Oaxaca
-- also: "Frente de Restaurant la Empanada, Av. Principal Mazunte"
-- hosts CI workshops, ecstatic jams, community dinners, the Sunday Full Experience
+- address: Avenida Principal, 70947 Mazunte, Oax.
+- also described as: Buganvilias / Calle Principal, across from the organic Sunday market
+- google maps: maps.app.goo.gl/poa29qrSEPzytVFi7
+- hilltop location, 2 min from downtown, 7 min from beach
+
+## also a hostel
+
+Casa Yeshua is NOT just a Sunday event — it's also a **hostel** listed on Hostelworld:
+- dorms + camping
+- yoga shala
+- shared kitchen, bar, 24h security
+- check-in 15:00-22:00
+- tagline: "A wellness-focused sanctuary for conscious travelers"
+- emphasizes intentional community living over party atmosphere
+- better tagline from their linktree: "A living sanctuary for movement, music and ritual, where daily morning practices and communal meals create a retreat-like space for reconnection."
 
 ## people
 
